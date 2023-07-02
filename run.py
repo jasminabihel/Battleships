@@ -40,7 +40,7 @@ def create_grid(state):
 def get_move():
     """Get user input for move"""
     move = input("Whats your next target? (row 2 and column 3 = '2 3')\n")
-    if move is "":
+    if move == "":
         print("Invalid move, try again\n")
         return get_move()
     return move

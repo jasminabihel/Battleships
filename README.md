@@ -3,7 +3,6 @@
 Battleships is Python Terminal game that is deployed on Heroku. 
 
 Players compete against the computer to try to find the ships before the computer does. 
-![alttext]()
 
 
 ## **Features** ##
@@ -11,14 +10,10 @@ Players compete against the computer to try to find the ships before the compute
 ### *Existing features* ###
 * Player is requested to input name and also how many columns and rows will the player want to play with.
 * After input of the players user name, the player chooses two numbers for row and collumn. 
-![alttext]()
 
 * If its a right guess the player gets "HIT!" message and the turn goes over to the computer.
-![alttext]()
-
 * The player takes turns with the computer until the player or the computer ships are destroyed.
 * The remaining ships are displayed on the screen.
-![alttext]()
 
 #### Error-checkling ####
 * The player must enter numbers for the row and collumn .
