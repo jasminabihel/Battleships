@@ -117,13 +117,13 @@ def setup():
     print("Destroy your opponents ships before they destroy yours! \n")
     print("------------------------------------------------------ \n")
 
-    user = input("Enter your user name: ")
+    user = input("Enter your user name:\n")
     print("Good luck " + user)
 
     print("Lets set up the grid!\n")
-    rows = int(input("How many rows: "))
-    cols = int(input("How many columns: "))
-    ships = int(input("How many ships: "))
+    rows = int(input("How many rows:\n"))
+    cols = int(input("How many columns:\n"))
+    ships = int(input("How many ships:\n"))
 
     state = State(ships, rows, cols)
     return state
