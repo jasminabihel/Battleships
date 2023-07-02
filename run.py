@@ -9,8 +9,8 @@ class State:
         self.user_score = user_score
         self.user_ships = user_ships
         self.computer_ships = computer_ships
-        self.rows = rows
-        self.columns = columns
+        #self.rows = rows
+        #self.columns = columns
         self.ships = ships
 
 
@@ -115,7 +115,7 @@ def setup():
     user = input("Enter your user name: ")
     print("Good luck " + user)
 
-    state = State(1, 1, 1, 1)
+    state = State(1, 1, 1, 1,5)
     return state
 
 
