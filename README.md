@@ -9,7 +9,7 @@ Players compete against the computer to try to find the ships before the compute
 ## **Features** ##
 
 ### *Existing features* ###
-* Player is informed that there are 5 ships randomly placed for the player to find.
+* Player is requested to input name and also how many columns and rows will the player want to play with.
 * After input of the players user name, the player chooses two numbers for row and collumn. 
 ![alttext]()
 
