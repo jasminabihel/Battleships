@@ -1,6 +1,6 @@
 # *Battleship*
 
-Battleship is Python Terminal game that is deployed on Heroku. 
+Battleships is Python Terminal game that is deployed on Heroku. 
 
 Players compete against the computer to try to find the ships before the computer does. 
 ![alttext]()
