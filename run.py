@@ -5,7 +5,7 @@ import random
 class State:
     """Creates an instance of game variables"""
 
-    def __init__(self, user_score, user_ships, computer_ships, ships):
+    def __init__(self, user_score, user_ships, com_ships, ships):
         self.user_score = user_score
         self.user_ships = user_ships
         self.computer_ships = computer_ships
