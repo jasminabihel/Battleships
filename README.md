@@ -1,31 +1,47 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# *Battleship*
 
-Welcome USER_NAME,
+Battleship is Python Terminal game that is deployed on Heroku. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Players compete against the computer to try to find the ships before the computer does. 
+![alttext]()
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## **Features** ##
 
-## Creating the Heroku app
+### *Existing features* ###
+* Player is informed that there are 5 ships randomly placed for the player to find.
+* After input of the players user name, the player chooses two numbers for row and collumn. 
+![alttext]()
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+* If its a right guess the player gets "HIT!" message and the turn goes over to the computer.
+![alttext]()
 
-1. `heroku/python`
-2. `heroku/nodejs`
+* The player takes turns with the computer until the player or the computer ships are destroyed.
+* The remaining ships are displayed on the screen.
+![alttext]()
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+#### Error-checkling ####
+* The player must enter numbers for the row and collumn .
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## **Testing** ##
+The code was continuasly tested in Visual Studio Code.
 
-Connect your GitHub repository and deploy as normal.
+## **Bugs** ##
 
-## Constraints
+No bugs found.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## **Code Validation** ##
 
------
-Happy coding!
+#### PEP8
+
+* No errors were found when the code was tested in PEP8 Python Validator.
+
+## **Deployment** ##
+* This project was deployed in Heroku using the followings steps:
+    - Go to the Heroku website, login and from the Heroku dashboard click on "Create New App"
+    - In the app settings, set the config_var and add the bulidpcks to python and node.js. 
+    - When the settings are complete go to the deploy and link the GitHub repository to the app
+    - Click on deploy
+
+
+* The live link can be found here:<a href=>Battleship</a>
