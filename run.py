@@ -19,7 +19,6 @@ def setup():
     In the setup stage the user chooses username and sets up the playing grid.
     The player chooses the number of rows, columns and ships for the game."""
 
-
     print("Welcome to the best ever Battleship game!!! \n")
     print("Choose your grid!\n")
     print("Destroy the computer ships before the computer destroys yours! \n")
@@ -32,13 +31,13 @@ def setup():
     print("Let`s set up the grid!\n")
     while True:
         try:
-           rows = int(input("How many rows:\n"))
-           cols = int(input("How many columns:\n"))
-           ships = int(input("How many ships:\n"))
-           break
+            rows = int(input("How many rows:\n"))
+            cols = int(input("How many columns:\n"))
+            ships = int(input("How many ships:\n"))
+            break
         except ValueError:
             print("That's not a valid option! Please choose a number")
-    
+
     state = State(ships, rows, cols)
     return state
 
@@ -104,12 +103,12 @@ def shoot(grid, move, is_user, state):
         print(f"Remaining user ships: {state.user_ships}")
         print(f"Remaining computer ships: {state.com_ships}")
         return state
-    
+
     except ValueError:
         print("Please input number")
         move = get_move()
         return shoot(grid, move, is_user, state)
-    
+
     except IndexError:
         print("Please input two numbers with space e.g `5 6`")
         move = get_move()
@@ -145,7 +144,7 @@ def end_game(state):
         print("Congratulations!! You won!!!")
         print("-----------------------------")
 
-        
+
 def main():
     """Main"""
     state = setup()
