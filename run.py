@@ -19,6 +19,7 @@ def setup():
     In the setup stage the user chooses username and sets up the playing grid.
     The player chooses the number of rows, columns and ships for the game."""
 
+
     print("Welcome to the best ever Battleship game!!! \n")
     print("Choose your grid!\n")
     print("Destroy the computer ships before the computer destroys yours! \n")
@@ -41,6 +42,18 @@ def setup():
     state = State(ships, rows, cols)
     return state
 
+
+def create_grid(state):
+    """Creates the playing area for computer and user"""
+    grid = []
+    for r in range(state.rows):
+        row = []
+        for c in range(state.columns):
+            row.append(False)
+        grid.append(row)
+    return grid
+
+
 def auto_add_ships(grid, state):
     """Add ships to the playing area with random number"""
     added_ships = 0
@@ -53,15 +66,7 @@ def auto_add_ships(grid, state):
     return grid
 
 
-def create_grid(state):
-    """Creates the playing area for computer and user"""
-    grid = []
-    for r in range(state.rows):
-        row = []
-        for c in range(state.columns):
-            row.append(False)
-        grid.append(row)
-    return grid
+
 
 
 def get_move():
