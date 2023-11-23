@@ -71,9 +71,6 @@ def get_move():
     if move == "":
         print("Invalid move, try again\n")
         return get_move()
-    else:
-        move == "Q"
-        print("Thank you for playing")
     return move
 
 
