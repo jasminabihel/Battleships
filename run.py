@@ -66,9 +66,6 @@ def auto_add_ships(grid, state):
     return grid
 
 
-
-
-
 def get_move():
     """Get user input for move"""
     move = input("Whats your next target? (row 2 and column 3 = '2 3')\n")
@@ -79,7 +76,8 @@ def get_move():
 
 
 def shoot(grid, move, is_user, state):
-    """Finds the move on the board and returns the value"""
+    """Finds the move on the board and returns the value,
+     the game continues until the ships number is zero."""
     try:
         splitted = move.split()
         row = int(splitted[0]) - 1
@@ -87,20 +85,22 @@ def shoot(grid, move, is_user, state):
         max_row = state.rows - 1
         max_col = state.columns - 1
         if row < 0 or row > max_row and col < 0 or col > max_col:
-            print("Invalid move \n")
+            print("Invalid move, number of row or column outside of grid")
             move = get_move()
             return shoot(grid, move, is_user, state)
         if grid[row][col] is True:
             grid[row][col] = False
-            print("HIT!!!\n -------")
+            print("HIT!!!")
             if is_user:
                 state.user_score += 1
                 state.com_ships -= 1
             else:
                 state.user_ships -= 1
         else:
-            print("Missed shot\n")
+            print("Missed shot`\n---------")
 
+        print(f"Rows:{state.rows}\nColumns:{state.columns}")
+        
         print(f"Remaining user ships: {state.user_ships}")
         print(f"Remaining computer ships: {state.com_ships}")
         return state
