@@ -67,10 +67,13 @@ def auto_add_ships(grid, state):
 
 def get_move():
     """Get user input for move"""
-    move = input("Whats your next target? (row 2 and column 3 = '2 3')\n")
+    move = input("Input your target (row 2 and column 3 = '2 3')\n")
     if move == "":
         print("Invalid move, try again\n")
         return get_move()
+    else:
+        move == "Q"
+        print("Thank you for playing")
     return move
 
 
@@ -108,7 +111,7 @@ def shoot(grid, move, is_user, state):
         print("Please input number")
         move = get_move()
         return shoot(grid, move, is_user, state)
-
+ 
     except IndexError:
         print("Please input two numbers with space e.g `5 6`")
         move = get_move()
