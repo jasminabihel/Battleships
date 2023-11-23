@@ -4,7 +4,7 @@ Battleships is Python Terminal game that is deployed on Heroku.
 
 Players compete against the computer to try to find the ships before the computer does.
 
-![alt text](//images/Battleship%20Game.png)
+![alt text](/images/Battleship%20Game.png)
 
 
 ## **Features** ##
