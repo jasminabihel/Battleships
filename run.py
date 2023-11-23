@@ -22,7 +22,6 @@ def setup():
     print("Welcome to the best ever Battleship game!!! \n")
     print("Choose your grid!\n")
     print("Destroy the computer ships before the computer destroys yours! \n")
-    print("LET US BEGIN")
     print("------------------------------------------------------ \n")
 
     user = input("Enter your user name:\n")
