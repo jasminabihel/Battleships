@@ -100,26 +100,20 @@ def shoot(grid, move, is_user, state):
             print("Missed shot`\n---------")
 
         print(f"Rows:{state.rows}\nColumns:{state.columns}")
-        
+
         print(f"Remaining user ships: {state.user_ships}")
         print(f"Remaining computer ships: {state.com_ships}")
         return state
-
-    except AttributeError:
-        print("Invalid move")
+    
+    except ValueError:
+        print("Please input number")
         move = get_move()
         return shoot(grid, move, is_user, state)
-
-
-def end_game(state):
-    """Ends game when the users ships get to zero"""
-    if state.user_ships == 0:
-        print("The computer won this round...\n")
-        print(f"Your score was {state.user_score}")
-        print("Better luck next time\n")
-    else:
-        print("Congratulations!! You won!!!")
-        print("-----------------------------")
+    
+    except IndexError:
+        print("Please input two numbers with space e.g `5 6`")
+        move = get_move()
+        return shoot(grid, move, is_user, state)
 
 
 def start_game(user_grid, computer_grid, state):
@@ -141,9 +135,17 @@ def start_game(user_grid, computer_grid, state):
     end_game(state)
 
 
+def end_game(state):
+    """Ends game when the users ships get to zero"""
+    if state.user_ships == 0:
+        print("The computer won this round...\n")
+        print(f"Your score was {state.user_score}")
+        print("Better luck next time\n")
+    else:
+        print("Congratulations!! You won!!!")
+        print("-----------------------------")
 
-
-
+        
 def main():
     """Main"""
     state = setup()
