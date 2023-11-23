@@ -14,6 +14,33 @@ class State:
         self.columns = cols
 
 
+def setup():
+    """Information about the game and input for user_name.
+    In the setup stage the user chooses username and sets up the playing grid.
+    The player chooses the number of rows, columns and ships for the game."""
+
+    print("Welcome to the best ever Battleship game!!! \n")
+    print("Choose your grid!\n")
+    print("Destroy the computer ships before the computer destroys yours! \n")
+    print("LET US BEGIN")
+    print("------------------------------------------------------ \n")
+
+    user = input("Enter your user name:\n")
+    print("Good luck " + user)
+
+    print("Let`s set up the grid!\n")
+    while True:
+        try:
+           rows = int(input("How many rows:\n"))
+           cols = int(input("How many columns:\n"))
+           ships = int(input("How many ships:\n"))
+           break
+        except ValueError:
+            print("That's not a valid option! Please choose a number")
+    
+    state = State(ships, rows, cols)
+    return state
+
 def auto_add_ships(grid, state):
     """Add ships to the playing area with random number"""
     added_ships = 0
@@ -109,24 +136,7 @@ def start_game(user_grid, computer_grid, state):
     end_game(state)
 
 
-def setup():
-    """Information about the game and input for user_name"""
 
-    print("Welcome to the best ever Battleship game!!! \n")
-    print("The grid is 5x5 and has 5 ships \n")
-    print("Destroy your opponents ships before they destroy yours! \n")
-    print("------------------------------------------------------ \n")
-
-    user = input("Enter your user name:\n")
-    print("Good luck " + user)
-
-    print("Lets set up the grid!\n")
-    rows = int(input("How many rows:\n"))
-    cols = int(input("How many columns:\n"))
-    ships = int(input("How many ships:\n"))
-
-    state = State(ships, rows, cols)
-    return state
 
 
 def main():
